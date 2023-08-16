@@ -477,4 +477,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # Project specific files
-appsettings.json
+*.json
