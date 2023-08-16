@@ -24,13 +24,14 @@ O objetivo do projeto é criar uma API simples para consultar, criar, atualizar 
 
 ## Recursos
 
-| Método | Rota            | Corpo da Requisição | Retorno     | Ação                    |
-| ------ | --------------- | ------------------- | ----------- | ----------------------- |
-| GET    | /api/Filme      |                     | Objeto JSON | Retorna todos os filmes |
-| GET    | /api/Filme/{id} |                     | Objeto JSON | Retorna um filme        |
-| POST   | /api/Filme      | Objeto JSON         | Objeto JSON | Registra um filme       |
-| PUT    | /api/Filme      | Objeto JSON         | Objeto JSON | Altera um filme         |
-| DELETE | /api/Filme      | Objeto JSON         | Objeto JSON | Exclui um filme         |
+| Método | Rota                        | Corpo da Requisição | Retorno     | Ação                            |
+| ------ | --------------------------- | ------------------- | ----------- | ------------------------------- |
+| GET    | /api/Filme                  |                     | Objeto JSON | Retorna 10 filmes               |
+| GET    | /api/Filme?offset=5&limit=5 |                     | Objeto JSON | Retorna 5 filmes a partir do 5º |
+| GET    | /api/Filme/{id}             |                     | Objeto JSON | Retorna um filme                |
+| POST   | /api/Filme                  | Objeto JSON         | Objeto JSON | Registra um filme               |
+| PUT    | /api/Filme                  | Objeto JSON         | Objeto JSON | Altera um filme                 |
+| DELETE | /api/Filme                  | Objeto JSON         | Objeto JSON | Exclui um filme                 |
 
 ### Exemplo de Request Body
 ```
