@@ -11,11 +11,20 @@ namespace ApiFilmes.Services.FilmeService
         {
             _context = context;
         }
-        public async Task<ServiceResponse<List<Filme>>> GetAll()
+        //public async Task<ServiceResponse<List<Filme>>> GetAll()
+        //{
+        //    ServiceResponse<List<Filme>> response = new();
+
+        //    response.Data = await _context.Filmes.ToListAsync();
+
+        //    return response;
+        //}
+
+        public async Task<ServiceResponse<List<Filme>>> Get(int offset, int limit)
         {
             ServiceResponse<List<Filme>> response = new();
 
-            response.Data = await _context.Filmes.ToListAsync();
+            response.Data = await _context.Filmes.Skip(offset).Take(limit).ToListAsync();
 
             return response;
         }

@@ -17,10 +17,16 @@ namespace ApiFilmes.Controllers
         {
             _filmeService = filmeService;
         }
+        //[HttpGet]
+        //public async Task<ActionResult<ServiceResponse<List<Filme>>>> GetAll()
+        //{
+        //    return Ok(await _filmeService.GetAll());
+        //}
+
         [HttpGet]
-        public async Task<ActionResult<ServiceResponse<List<Filme>>>> GetAll()
+        public async Task<ActionResult<ServiceResponse<List<Filme>>>> Get([FromQuery] int offset, int limit = 10)
         {
-            return Ok(await _filmeService.GetAll());
+            return Ok(await _filmeService.Get(offset, limit));
         }
 
         [HttpGet("{id}")]
